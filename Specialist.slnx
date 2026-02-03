@@ -4,5 +4,7 @@
     <File Path=".gitattributes" />
     <File Path=".gitignore" />
     <File Path="README.md" />
+    <File Path="docker-compose.yaml" />
+    <File Path=".env" />
   </Folder>
 </Solution>
