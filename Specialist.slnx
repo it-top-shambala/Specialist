@@ -5,4 +5,5 @@
     <File Path=".gitignore" />
     <File Path="README.md" />
   </Folder>
+  <Project Path="Desktop\Desktop.csproj" Type="Classic C#" />
 </Solution>
