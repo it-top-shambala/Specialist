@@ -1,6 +1,6 @@
 ﻿services:
   webapi:
-    image: webapi
+    image: Specialist-webapi:latest
     build:
       context: .
       dockerfile: WebApi/Dockerfile
