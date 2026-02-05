@@ -5,4 +5,8 @@
     <File Path=".gitignore" />
     <File Path="README.md" />
   </Folder>
+  <Folder Name="/Solution Items/">
+    <File Path="compose.yaml" />
+  </Folder>
+  <Project Path="WebApi\WebApi.csproj" Type="Classic C#" />
 </Solution>
