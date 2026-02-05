@@ -5,4 +5,5 @@
     <File Path=".gitignore" />
     <File Path="README.md" />
   </Folder>
+  <Project Path="Specialists_DB/Specialists_DB.csproj" />
 </Solution>
