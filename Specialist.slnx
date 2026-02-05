@@ -4,6 +4,9 @@
     <File Path=".gitattributes" />
     <File Path=".gitignore" />
     <File Path="README.md" />
+    <File Path="compose.yml" />
+    <File Path=".env" />
   </Folder>
+  <Project Path="WebApi\WebApi.csproj" Type="Classic C#" />
   <Project Path="Desktop\Desktop.csproj" Type="Classic C#" />
 </Solution>
