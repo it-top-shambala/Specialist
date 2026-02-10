@@ -6,9 +6,9 @@ public class Users
     public int? InfoId {get; set;}
     public string Email {get; set;}
     public string Password {get; set;}
-    public string? Description {get; set;}
-    public string? Education {get; set;}
-    public string? Practice {get; set;}
+    public string Description {get; set;}
+    public string Education {get; set;}
+    public string Practice {get; set;}
     public int StatusId {get; set;}
 
     public Users(
