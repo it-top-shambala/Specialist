@@ -1,6 +1,6 @@
--- CREATE DATABASE sprecialist_db;
--- CREATE SCHEMA test;
--- SET search_path test;
+CREATE DATABASE sprecialist_db;
+CREATE SCHEMA test;
+SET search_path test;
 
 CREATE TABLE users (
     id SERIAL NOT NULL UNIQUE PRIMARY KEY,
@@ -12,6 +12,7 @@ CREATE TABLE users (
     practice TEXT NOT NULL CHECK ( practice !='' ),
     status_id INTEGER NOT NULL,
     FOREIGN KEY (status_id) REFERENCES statuses(id)
+    FOREIGN KEY (info_id) REFERENCES info_user(id)
 );
 
 CREATE TABLE info_user (
@@ -30,8 +31,9 @@ CREATE TABLE roles (
 );
 
 CREATE TABLE role_users (
-    user_id INTEGER NOT NULL PRIMARY KEY,
-    role_id INTEGER NOT NULL PRIMARY KEY,
+    user_id INTEGER NOT NULL,
+    role_id INTEGER NOT NULL,
+    PRIMARY KEY (user_id, role_id),
     FOREIGN KEY (user_id) REFERENCES users(id),
     FOREIGN KEY(role_id) REFERENCES roles(id)
 );
@@ -42,10 +44,10 @@ CREATE TABLE statuses (
 );
 
 --вставка данных в таблицу статусов
-INSERT INTO statuses (name) VALUES ('active');
-INSERT INTO statuses (name) VALUES ('deactivate');
-INSERT INTO statuses (name) VALUES ('frozen');
+INSERT INTO statuses (name) VALUES ('Active');
+INSERT INTO statuses (name) VALUES ('Frozen');
+INSERT INTO statuses (name) VALUES ('Banned');
 --вставка данных в таблицу ролей
-INSERT INTO roles (name_role) VALUES ('admin');
-INSERT INTO roles (name_role) VALUES ('user');
-INSERT INTO roles (name_role) VALUES ('guest');
+INSERT INTO roles (name_role) VALUES ('Admin');
+INSERT INTO roles (name_role) VALUES ('User');
+INSERT INTO roles (name_role) VALUES ('Guest');
