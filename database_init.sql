@@ -1,6 +1,6 @@
-CREATE DATABASE sprecialist_db;
+CREATE DATABASE specialist_db;
 CREATE SCHEMA test;
-SET search_path test;
+SET search_path = test;
 
 CREATE TABLE users (
     id SERIAL NOT NULL UNIQUE PRIMARY KEY,
@@ -11,7 +11,7 @@ CREATE TABLE users (
     education TEXT NOT NULL CHECK ( education !='' ),
     practice TEXT NOT NULL CHECK ( practice !='' ),
     status_id INTEGER NOT NULL,
-    FOREIGN KEY (status_id) REFERENCES statuses(id)
+    FOREIGN KEY (status_id) REFERENCES statuses(id),
     FOREIGN KEY (info_id) REFERENCES info_user(id)
 );
 
