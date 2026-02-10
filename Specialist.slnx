@@ -6,7 +6,8 @@
     <File Path="README.md" />
     <File Path="compose.yml" />
     <File Path=".env" />
+    <File Path="database_init.sql" />
   </Folder>
-  <Project Path="WebApi\WebApi.csproj" Type="Classic C#" />
   <Project Path="Desktop\Desktop.csproj" Type="Classic C#" />
+  <Project Path="WebApi\WebApi.csproj" Type="Classic C#" />
 </Solution>
