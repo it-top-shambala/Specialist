@@ -21,8 +21,7 @@ CREATE TABLE info_user (
     last_name TEXT NOT NULL CHECK ( last_name !='' ),
     sex TEXT,
     birthday DATE,
-    phone TEXT UNIQUE,
-    FOREIGN KEY (id) REFERENCES users(info_id)
+    phone TEXT UNIQUE
 );
 
 CREATE TABLE roles (
