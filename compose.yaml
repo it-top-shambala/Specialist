@@ -12,3 +12,4 @@
       - ASPNETCORE_URLS=http://+:8080
     networks:
       - specialist_network
+      
